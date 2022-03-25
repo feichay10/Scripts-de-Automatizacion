@@ -1,0 +1,17 @@
+Desde la maquina local: 
+$ ssh-keygen -t rsa -b 4096 -----> Para generar una key
+$ export USER_AT_HOST=usuario@10.6.131.106 ----> en usuario y la IP ponemos el usuario y la IP de la maquina
+$ export PUBKEYPATH="$HOME/.ssh/id_rsa.pub"
+$ ssh-copy-id -i "$PUBKEYPATH" "$USER_AT_HOST"
+
+Para hacer login sin contraseña configuramos el fichero: ~/.ssh/configuramos
+Tiene que quedar de la siguiente manera (no poner las ""):
+
+Host "Lo que quieras"
+    HostName "Direccion IP o host"
+    User "Usuario"
+
+Por ejemplo:
+Host CyA
+    HostName 10.6.123.123
+    User Cheuk

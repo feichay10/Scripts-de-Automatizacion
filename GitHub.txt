@@ -1,0 +1,4 @@
+Crear repositorio: git clone URL
+git add .
+git commit -m "mensaje"
+git push
