@@ -1,0 +1,15 @@
+Con scp
+Suponiendo que tu carpeta está en /home/tu_usuario/carpeta1 en el equipo remoto.
+1. Dentro de tu instancia, entra un nivel antes con cd /home/tu_usuario/
+
+2. Crea un archivo .tar.gz de esa carpeta con "tar czf carpeta1.tar.gz carpeta1"
+
+3. Sal de su sesión de ssh en esa instancia de EC2.
+
+4. Copia el archivo tar.gz a tu equipo local con
+    scp usuario_de_la_instancia@ip_de_instancia:/home/tu_usuario/carpeta1.tar.gz /home/usuario
+
+5. Descomprime con "tar xf carpeta1.tar.gz"
+
+6. Puedes hacerlo sin en archivo tar con el parámetro -r, si no te interesa la compresión, por ejemplo.
+    scp -r usuario_remoto@ip_de_instancia:/home/tu_usuario/carpeta1 /home/usuario

@@ -4,7 +4,6 @@ VPNC="which vpnc"
 opcion=
 etiqueta=0
 
-
 $VPNC > /dev/null || etiqueta=1
 
 if [ "$etiqueta" == "0" ]; then
